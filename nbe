@@ -1,0 +1,11 @@
+int nbe( char *Bureau_vote, char ID,int t[],int n) ;
+int nb=0,i;
+for(i=0;i<n;i++)
+{if(t[i]=!ID)
+	nb=-1;
+return nb;
+
+
+
+
+
