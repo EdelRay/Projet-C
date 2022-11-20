@@ -1,33 +1,34 @@
-#include <stdio.h> 
+#include <stdio.h>
 #include <string.h>
-#include "bureau_de_vote.h" 
-int main ()
+#include"reclamation.h"
+
+int main()
 {
+    reclam r1={12,"33",12,03,2022,"123","salle mal organisée",1,"salle \n"},r2={1,"38",30,04,2022,"123","salle organisée",2,"salle1"} , r3 ;
 
-Bureauv  B1={ 7,"ldlf" , 20, "ijijo", "67892"  ,2000, 7,8},B2={ 6 , "poi" , 15 , "ojkdf" , " okj,f"  , 2000,7,8} ,B3;
-int y ;
+    int y=ajouter("reclam.txt",r1);
+    if(y==1)
+        printf("\n ajout de reclamation avec succés");
+    else printf("\n echec ajout");
 
- y=ajouter("Bureau_de_vote.txt", B1);
-    
-if (y==1)
-    printf("\najout de bureau avec succes ");
-else printf("\nechec ajout"); 
 
-    
-  y=modifier( "Bureau_de_vote.txt" ,"hujijnib" ,B2);
-if(y==1)
-    printf("\nModification de Bureau avec succes");
-else printf ("\nechec Modification");
 
- y=supprimer(" Bureau_de_vote.txt", 10);
-if (y==1)
-    printf("\nSuppression de Bureau avec succes ");
-else printf (" \nechec Suppression");
-B3=chercher(" Bureau_de_vote.txt", 5);
-if (strcmp ( B3.ID_bv,"-1"))
-    printf (" introuvable");
-else 
-printf ("dispo");
-return 0;
+     y=modifier("reclam.txt",12,r2);
+    if(y==1)
+        printf("\n modification de reclamation avec succés");
+    else printf("\n echec de modification");
+
+
+   /*y=supprimer("reclam.txt",1);
+    if(y==1)
+        printf("\n suppression de reclamation avec succés");
+    else printf("\n echec de suppression");
+
+
+   r3=chercher("reclam.txt",3);
+    if(r3.id==-1)
+        printf("introuvable");
+    else printf("disponible");*/
+    return 0 ;
 }
 
